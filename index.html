@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+</head>
+<body>
+  <div class="container" id="fondo">
+  <div class="player">
+    <div class="player__controls">
+      <div class="player__btn player__btn--small" id="previous">
+        <i class="fas fa-arrow-left"></i>
+      </div>
+      <h5 class="player__title">playing now</h5>
+      <div class="player__btn player__btn--small" id="icon-menu">
+        <i class="fas fa-bars"></i>
+      </div>
+    </div>
+    <div class="player__album">
+      <img id="thumbnail" src="https://www.devilelectric.com/wp-content/uploads/2019/05/DE_DEBUT.png" alt="Album Cover" class="player__img" loading="lazy" />
+    </div>
+
+    <h2 class="player__artist">Devil Electric</h2>
+    <h3 class="player__song">The Dove and the serpent</h3>
+
+    <input type="range" min="0" max="" value="0" class="player__level" id="range" onchange="changeProgressBar()" />
+    <div class="audio-duration">
+      <div class="start"></div>
+      <div class="end"></div>
+    </div>
+
+    <audio src="assets/media/track1.mp3" class="player__audio" controls id="song"></audio>
+
+    <div class="player__controls">
+      <div class="player__btn player__btn--medium" id="backward" onclick="previousSong()">
+        <i class="fas fa-backward"></i>
+      </div>
+
+      <div onclick="playPause()" id="play" class="player__btn player__btn--medium blue play">
+        <i class="fas fa-play play-btn"></i>
+        <i class="fas fa-pause pause-btn hide"></i>
+      </div>
+
+      <div class="player__btn player__btn--medium" id="forward" onclick="nextSong()">
+        <i class="fas fa-forward"></i>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<script src="assets/js/index.js" type="text/javascript"></script>
+  
+</body>
+</html>
